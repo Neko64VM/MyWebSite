@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color:rgb(255, 255, 255);
+}  
+
+#m_Title {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color:rgb(34, 34, 34);
+}
+
+#m_Title h1 {
+    margin: 0;
+    font-size: 65px;
+    color: white;
+}
+
+#m_Main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+}
+
+.m_MyImage {
+    width: 50%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.m_MyImage img {
+    max-width: 90%;
+    height: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+    transition: scale 0.3s;
+}
+
+.m_MyImage img:hover {
+    scale: 1.015;
+}
+
+#m_AboutMe {
+    width: 50%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: left;
+}
+
+.m_LinkItems {
+    gap: 35px;
+    padding: 0;
+
+    display: flex;
+    justify-content: left;
+}
+
+#m_Copyright {
+    height: 3vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center;
+}
+
+a {
+    transition: scale 0.3s;
+}
+
+a:hover {
+    scale: 1.075;
+}
