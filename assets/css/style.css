@@ -7,21 +7,22 @@ body {
     background-color:rgb(255, 255, 255);
 }  
 
-#m_Title {
+#Title {
     height: 100vh;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center; 
     background-color:rgb(34, 34, 34);
 }
 
-#m_Title h1 {
+#Title h1 {
     margin: 0;
     font-size: 65px;
     color: white;
 }
 
-#m_Main {
+#Main {
     display: flex;
     flex-direction: row;
     justify-content: center; 
@@ -67,7 +68,7 @@ body {
     justify-content: left;
 }
 
-#m_Copyright {
+#Copyright {
     height: 3vh;
 
     display: flex;
