@@ -8,7 +8,7 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
 }  
 
-#Title {
+#CTitle {
     height: 100vh;
     width: auto;
     display: flex;
@@ -17,13 +17,14 @@ body {
     background-color:rgb(34, 34, 34);
 }
 
-#Title h1 {
-    margin: 0;
+#CTitle h1 {
     font-size: 65px;
     color: white;
 }
 
-#Main {
+#CMain {
+    height: 100vh;
+    width: auto;
     display: flex;
     flex-direction: row;
     justify-content: center; 
@@ -64,14 +65,13 @@ body {
 .m_LinkItems {
     gap: 35px;
     padding: 0;
-
     display: flex;
     justify-content: left;
 }
 
 #Copyright {
     height: 3vh;
-
+    font-size: small;
     display: flex;
     flex-direction: column;
     justify-content: center; 
