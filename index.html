@@ -12,22 +12,23 @@
 
         <div id="CMain">
             <div class="m_MyImage">
-                <img src="assets/image/Neko64V.png" width="400px" height="400px">
+                <img src="assets/image/Neko64VM.png" width="400px" height="400px">
             </div>
             <div id="m_AboutMe">
                 <h2>About Me</h2>
                 名前：らい<br>
-                生誕：2003年5月 (21歳)<br>
-                趣味：VRChat、コーディング<br>
+                生誕：2003年5月30日 (21歳)<br>
+                趣味：C++ programming、VRChat<br>
                 興味：コンピューター関連、セキュリティ、国際情勢、ﾈｺﾁｬﾝ
 
                 <h2>Activities</h2>
-                特に面白味もないものを作っています。
+                ゲーム関係だったり面白味もないモノを作っています。<br>
+                詳しくはGitHubを参照。
 
                 <h2>Social</h2>
                 <ul class="m_LinkItems">
                     <a href="https://twitter.com/Neko64V" target="_blank"><img src="assets/image/X_Logo.png" height="50px"></a>
-                    <a href="https://misskey.io/@Neko64V" target="_blank"><img src="assets/image/Misskey.png" height="50px"></a>
+                    <a href="#" onclick="ToClipboard('neko64v'); return false;"><img src="assets/image/Discord-Symbol-Blurple.png" height="50px"></a>
                     <a href="https://github.com/Neko64VM" target="_blank"><img src="assets/image/GitHub.png" height="50px"></a> 
                     <a href="https://vrchat.com/home/user/usr_8efd295e-865f-4558-88fd-086b30a3b111" target="_blank"><img src="assets/image/VRChat.png" height="50px"></a>
                     <!--<a href="https://neko64v.booth.pm/" target="_blank"><img src="assets/image/Booth.png" height="50px"></a>-->
@@ -41,3 +42,38 @@
         </div>
     </body>
 </html>
+
+<div id="notification" class="notification"></div>
+
+<script>
+    // クリップボードにコピーするやつ
+    function ToClipboard(text)
+    {
+        navigator.clipboard.writeText(text).then(() => {
+            console.log('コピー成功:', text);
+            // なにか
+            SimpleNotification("DiscordのIDをクリップボードにコピーしました！");
+        }).catch(err => {
+            console.error('コピー失敗:', err);
+            SimpleNotification("何かが失敗しました。");
+        });
+    }
+
+    // 通知
+    function SimpleNotification(message) 
+    {
+        const notify = document.getElementById("notification");
+        notify.textContent = message;
+        notify.style.display = "block";
+        notify.style.opacity = "1";
+
+        setTimeout(() => {
+        notify.style.transition = "opacity 0.5s";
+        notify.style.opacity = "0";
+        setTimeout(() => {
+            notify.style.display = "none";
+            notify.style.transition = "";
+        }, 500);
+        }, 3000);
+    }
+</script>
