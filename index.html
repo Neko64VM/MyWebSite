@@ -10,6 +10,8 @@
             <h1>nekochan.cc</h1>
         </div>
 
+        <button id="scrollToBottom" class="scroll-button">↓</button>
+
         <div id="CMain">
             <div class="m_MyImage">
                 <img src="assets/image/Neko64VM.png" width="400px" height="400px">
@@ -76,4 +78,11 @@
         }, 500);
         }, 3000);
     }
+
+    document.getElementById('scrollToBottom').addEventListener('click', () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+  });
 </script>
