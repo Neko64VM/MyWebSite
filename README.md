@@ -1,6 +1,6 @@
 # Web
-https://nekochan.cc で使用するシンプルなWebサイトのプロジェクト。  
-インターネット黎明期～平成中頃に流行った個人サイトをモダンにした感じです。  
+https://nekochan.cc で使用するシンプルなWebサイト。  
+HTML/CSS/JavaScriptの手書きで非常に「温かみ」があります。  
 BIO LINK的な使い方を想定しています。
 
 ### Icon
@@ -13,5 +13,3 @@ BIO LINK的な使い方を想定しています。
   https://github.com/logos
 * VRChat  
   https://hello.vrchat.com/press
-* Pixiv/Booth  
-  https://www.pixiv.co.jp/news/press-kit/
