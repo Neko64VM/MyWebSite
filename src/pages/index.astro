@@ -1,0 +1,90 @@
+---
+import "../style/style.css"
+import Global from "../layouts/Global.astro";
+import img_self from '../assets/Neko64V_03.png';
+import img_logo_x from '../assets/X_Logo.png';
+import img_logo_dcd from '../assets/Discord-Symbol-Blurple.png';
+import img_logo_git from '../assets/GitHub.png';
+import img_logo_vrc from '../assets/VRChat.png';
+---
+
+<Global />
+<html>
+	<head>
+        <title>Cute Nekochan!</title>
+    </head>
+        <div id="CTitle">
+            <h1 id="textType"></h1>
+        </div>
+        <div id="CMain">
+            <div class="m_MyImage">
+                <img src={img_self.src} width="400px" height="400px">
+            </div>
+            <div id="m_AboutMe">
+                <h2>About Me</h2>
+                名前：らい / ねこちゃんすき<br>
+                生誕：2003年5月30日 (22歳)<br>
+                趣味：VRChat、SNSの巡回、C++ Programming<br>
+                興味：IT分野、国際情勢、ﾈｺﾁｬﾝ<br>
+                学習：コンピューターサイエンス、ウクライナ語
+
+                <h2>Activities</h2>
+                C++や各種解析、その他関連技術を独学で学びFPSゲームのチートの作成・販売等を行っていました。<br>
+                今ではVRChatで静かに暮らしています。そっとしておいてください。でも気になったら聞いてもらっても大丈夫です。<br>
+
+                <h2>Social</h2>
+                <ul class="m_LinkItems">
+                    <a href="https://twitter.com/Neko64V" target="_blank"><img src={img_logo_x.src} height="50px"></a>
+                    <a href=""><img src={img_logo_dcd.src} height="50px"></a>
+                    <a href="https://github.com/Neko64VM" target="_blank"><img src={img_logo_git.src} height="50px"></a> 
+                    <a href="https://vrchat.com/home/user/usr_8efd295e-865f-4558-88fd-086b30a3b111" target="_blank"><img src={img_logo_vrc.src} height="50px"></a>
+                </ul>
+            </div>
+        </div>
+        <div id="Copyright">
+            <p>©2024 Neko64V.</p>
+        </div>
+    </body>
+</html>
+
+<script>
+    const vecTextList = [
+        "Welcome!",
+        "nekochan.cc",
+        "by @Neko64V",
+        "ページは下にも続きます"
+    ];
+
+    let textNum = 0;
+    let strIndex = 0;
+    let delay = 75; // ms
+    let isDeleting = false; // flag
+    const elm = document.getElementById("textType");
+
+    function typeEffect() {
+      const currentText = vecTextList[textNum];
+      if (isDeleting) {
+        strIndex--;
+        elm.textContent = currentText.substring(0, strIndex);
+      } else {
+        strIndex++;
+        elm.textContent = currentText.substring(0, strIndex);
+      }
+
+      if (!isDeleting && strIndex === currentText.length) {
+        isDeleting = true;
+        delay = 2000; 
+      } else if (isDeleting && strIndex === 0) {
+        isDeleting = false;
+        textNum = (textNum + 1) % vecTextList.length;
+        delay = 300;
+      } else {
+        delay = isDeleting ? 50 : 100;
+      }
+
+      setTimeout(typeEffect, delay);
+    }
+
+    // 実行
+    typeEffect();
+</script>
