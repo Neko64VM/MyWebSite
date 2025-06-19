@@ -1,11 +1,11 @@
-# Web
+# My Web site
 https://nekochan.cc で使用するシンプルなWebサイト。  
 トップページではBIO LINK、/note ではブログとか軽い記事的なモノを置けるようになっています。が、WIPです。
 
-## Framework
+## いろいろ
 [Astro](https://astro.build/) を使用しました。
 
-### Icon
+## Icon
 ロゴは公式で配布されている以下のものを使用しました。
 * X  
   https://about.x.com/ja/who-we-are/brand-toolkit
