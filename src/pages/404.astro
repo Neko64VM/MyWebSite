@@ -7,7 +7,25 @@ import Global from "../layouts/Global.astro";
     <head>
         <title>404 Not found.</title>
     </head>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; 
+            background-color: rgb(255, 255, 255);
+        }
+        h1 {
+            font-size: 50px;
+        }
+        h2 {
+            font-weight: 400;
+            font-size: 20px;
+        }
+    </style>
     <body>
-        <p>404 Not found - こんなところで何をしているんだ！</p>
+        <h1>404 Not found</h1>
+        <h2>こんなところで何してるんだ！</h2>
     </body>
 </html>
